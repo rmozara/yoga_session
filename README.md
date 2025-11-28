@@ -103,8 +103,6 @@ Default: off
 
 ---
 
----
-
 ## Output Structure
 
 The program prints the full session in this order:
