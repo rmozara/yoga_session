@@ -123,7 +123,6 @@ Example:
     Section | Chapter | Content
     …
 
----
 
 ## Color Mode (optional)
 
@@ -143,28 +142,22 @@ All colors are standard ANSI escape sequences and safe for most terminals.
 
 ## Project Structure
 
-main.py
-
-    Entry point and argument parser.
-
-data/
-
-    yoga_data.py — all asanas, pranayama lists, mudras.
-
-generators/
-
-    pranayama_generator.py
-    session_builder.py
-    backblock.py
-    coreblock.py
-
-output/
-
-    printer.py — ANSI formatting and hierarchical headers.
-
-README.md
-
-    You are reading it.
+yoga_session/
+├── main.py                     # Entry point & argument parser
+│
+├── data/
+│   └── yoga_data.py            # Asanas, pranayama lists, mudras
+│
+├── generators/
+│   ├── pranayama_generator.py
+│   ├── session_builder.py
+│   ├── backblock.py
+│   └── coreblock.py
+│
+├── output/
+│   └── printer.py              # ANSI formatting & headers
+│
+└── README.md                   # Documentation
 
 
 ## Focus Profiles
