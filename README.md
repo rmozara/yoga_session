@@ -11,7 +11,6 @@ A small Python program that generates structured yoga sessions, complete with:
 
 Output is cleanly formatted for terminals, optionally with ANSI color codes.
 
----
 
 ## Features
 
@@ -22,7 +21,6 @@ Output is cleanly formatted for terminals, optionally with ANSI color codes.
 - Optional color mode (“dark forest” scheme)
 - All data stored in simple Python dictionaries for easy modification
 
----
 
 ## Installation
 
@@ -37,7 +35,6 @@ Run with Python 3:
 
 No external dependencies are required.
 
----
 
 ## Running the Program
 
@@ -54,7 +51,6 @@ Example:
         --back-min 2 \
         --back-max 3
 
----
 
 ## Command Line Arguments
 
@@ -101,7 +97,6 @@ Optional integer seed for reproducibility.
 `on` or `off`. Enables minimal ANSI color highlights.
 Default: off
 
----
 
 ## Output Structure
 
@@ -145,29 +140,32 @@ To enable:
 
 All colors are standard ANSI escape sequences and safe for most terminals.
 
----
 
 ## Project Structure
 
 main.py
+
     Entry point and argument parser.
 
 data/
+
     yoga_data.py — all asanas, pranayama lists, mudras.
 
 generators/
+
     pranayama_generator.py
     session_builder.py
     backblock.py
     coreblock.py
 
 output/
+
     printer.py — ANSI formatting and hierarchical headers.
 
 README.md
+
     You are reading it.
 
----
 
 ## Focus Profiles
 
@@ -186,7 +184,6 @@ Mechanism (as implemented in `FOCUS` in `data/yoga_data.py`):
 - Select `--count` from the reordered list.
 - If no mapping exists for the chosen profile, purely random selection is used.
 
----
 
 ## How the Session Is Built
 
@@ -209,7 +206,6 @@ For each of these standard sections, the generator:
 - Uses `pick_subchapters()` to select `--count` subchapters (possibly focus-weighted).
 - Stores them as `(section, chapter, [sub1, sub2, …])`.
 
----
 
 ## Back Block
 
@@ -227,7 +223,6 @@ Back Block composition:
 Each entry is a `(chapter, item)` tuple, where `chapter` is either a real book chapter
 (e.g. `"Prone Poses"`) or the pseudo-chapter `"Back Focus"`.
 
----
 
 ## Core Block
 
@@ -238,7 +233,6 @@ avoiding duplicates where possible.
 
 All Core Block items appear under `"Core Poses"` with chapter `"Core Focus"`.
 
----
 
 ## Output Layout
 
@@ -256,7 +250,6 @@ Mudra sections:
 
 Mudra descriptions come from `MUDRAS_INFO`, intentions from `MUDRAS_INTENTION`.
 
----
 
 ## Data Source
 
@@ -267,7 +260,6 @@ https://www.scribd.com/document/334551448/2-100-Asanas-pdf
 
 Additional back-focused and core-focused asanas are manually curated for functional clarity.
 
----
 
 ## Modifying the Data
 
@@ -290,7 +282,6 @@ You can freely:
 
 The generator will automatically use the updated data on the next run.
 
----
 
 ## License
 
